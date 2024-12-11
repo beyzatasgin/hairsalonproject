@@ -1,0 +1,24 @@
+﻿@model kuaforsalonu.Models.Islem
+
+@{
+    ViewData["Title"] = "İşlem Sil";
+}
+
+<h1>İşlem Sil</h1>
+
+<p>Bu işlemi silmek istediğinizden emin misiniz?</p>
+
+<form asp-action="DeleteConfirmed">
+    <div class="form-group">
+        <label>İşlem Adı: @Model.Ad</label>
+    </div>
+    <div class="form-group">
+        <label>Süre: @Model.SureDakika dakika</label>
+    </div>
+    <div class="form-group">
+        <label>Ücret: @Model.Ucret TL</label>
+    </div>
+    <input type="hidden" name="IslemId" value="@Model.IslemId" />
+    <button type="submit" class="btn btn-danger">Sil</button>
+    <a href="@Url.Action("Details", "Salon", new { id = Model.SalonId })" class="btn btn-secondary">Vazgeç</a>
+</form>

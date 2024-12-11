@@ -1,0 +1,175 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = kuaforsalonu
+build_property.RootNamespace = kuaforsalonu
+build_property.ProjectDir = C:\Users\Beyza\Desktop\sfml-yeni\projeler\c#\kuaforsalonu\kuaforsalonu\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Beyza\Desktop\sfml-yeni\projeler\c#\kuaforsalonu\kuaforsalonu
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/AdminCalisan/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5DYWxpc2FuXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/AdminCalisan/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5DYWxpc2FuXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/AdminCalisan/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5DYWxpc2FuXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/AdminCalisan/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5DYWxpc2FuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/AdminMusteri/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5NdXN0ZXJpXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/AdminMusteri/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5NdXN0ZXJpXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/AdminMusteri/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5NdXN0ZXJpXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/AdminMusteri/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5NdXN0ZXJpXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Islem/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNsZW1cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Islem/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNsZW1cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Islem/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNsZW1cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Islem/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNsZW1cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Islem/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNsZW1cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Kullanıcı/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuxLFjxLFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Kullanıcı/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuxLFjxLFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Kullanıcı/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuxLFjxLFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Kullanıcı/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuxLFjxLFcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Salon/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Fsb25cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Salon/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Fsb25cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Salon/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Fsb25cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Salon/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Fsb25cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Salon/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Fsb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/UyeRandevu/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXllUmFuZGV2dVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/UyeRandevu/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXllUmFuZGV2dVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/UyeRandevu/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXllUmFuZGV2dVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/UyeRandevu/Details2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXllUmFuZGV2dVxEZXRhaWxzMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/UyeRandevu/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXllUmFuZGV2dVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/UyeRandevu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXllUmFuZGV2dVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fg70o1srsq

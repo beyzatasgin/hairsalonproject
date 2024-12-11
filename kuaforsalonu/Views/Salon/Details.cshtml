@@ -1,0 +1,25 @@
+﻿@model kuaforsalonu.Models.Salon
+
+<h2>@Model.Ad Salonunun İşlemleri</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>İşlem Adı</th>
+            <th>Süre (dakika)</th>
+            <th>Ücret</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var islem in Model.Islemler)
+        {
+            <tr>
+                <td>@islem.Ad</td>
+                <td>@islem.SureDakika</td>
+                <td>@islem.Ucret</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "Islem", new { salonId = Model.SalonId })" class="btn btn-secondary">Yeni İşlem Ekle</a>

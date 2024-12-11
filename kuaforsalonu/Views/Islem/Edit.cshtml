@@ -1,0 +1,24 @@
+﻿@model kuaforsalonu.Models.Islem
+
+@{
+    ViewData["Title"] = "İşlem Düzenle";
+}
+
+<h1>İşlem Düzenle</h1>
+
+<form asp-action="EditIslem">
+    <div class="form-group">
+        <label for="Ad">İşlem Adı</label>
+        <input type="text" class="form-control" id="Ad" name="Ad" value="@Model.Ad" required />
+    </div>
+    <div class="form-group">
+        <label for="SureDakika">Süre (dakika)</label>
+        <input type="number" class="form-control" id="SureDakika" name="SureDakika" value="@Model.SureDakika" required />
+    </div>
+    <div class="form-group">
+        <label for="Ucret">Ücret</label>
+        <input type="number" class="form-control" id="Ucret" name="Ucret" value="@Model.Ucret" required />
+    </div>
+    <input type="hidden" name="SalonId" value="@Model.SalonId" />
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

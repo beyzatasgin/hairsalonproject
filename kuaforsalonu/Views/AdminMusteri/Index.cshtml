@@ -1,0 +1,79 @@
+﻿@model IEnumerable<kuaforsalonu.Models.Musteri>
+
+@{
+    ViewBag.Title = "Müşteri Listesi";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Müşteriler</h2>
+
+<p>
+    @Html.ActionLink("Yeni Müşteri Ekle", "Create", null, new { @class = "btn btn-primary" })
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Yetki.YetkiAdı)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Adi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Soyadi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().KullaniciAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Sifre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Adres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Telefon)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Yetki.YetkiAdı)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Soyadi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KullaniciAdi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sifre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adres)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefon)
+                </td>
+                <td>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = item.MusteriNo }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = item.MusteriNo })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
