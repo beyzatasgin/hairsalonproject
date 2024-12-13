@@ -18,9 +18,8 @@ namespace kuaforsalonu.Models
         public virtual DbSet<Saat> Saats { get; set; }
         public virtual DbSet<Salon> Salonlar { get; set; }
         public virtual DbSet<Yetki> Yetkis { get; set; }
-
         public virtual DbSet<Islem> Islemler { get; set; }
-
+        public virtual DbSet<Admin> Admin { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -34,6 +33,7 @@ namespace kuaforsalonu.Models
             modelBuilder.Entity<Salon>().ToTable("Salonlar");
             modelBuilder.Entity<Islem>().ToTable("Islemler");
             modelBuilder.Entity<Yetki>().ToTable("Yetki");
+            modelBuilder.Entity<Admin>().ToTable("Admin");
         }
     }
 }

@@ -292,3 +292,10 @@ C:\Users\Beyza\Desktop\sfml-yeni\projeler\c#\kuaforsalonu\kuaforsalonu\bin\Debug
 C:\Users\Beyza\Desktop\sfml-yeni\projeler\c#\kuaforsalonu\kuaforsalonu\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\Beyza\Desktop\sfml-yeni\projeler\c#\kuaforsalonu\kuaforsalonu\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\Beyza\Desktop\sfml-yeni\projeler\c#\kuaforsalonu\kuaforsalonu\obj\Debug\net8.0\kuaforsalonu.sourcelink.json
+C:\Users\Beyza\Desktop\sfml-yeni\projeler\c#\kuaforsalonu\kuaforsalonu\bin\Debug\net8.0\System.Web.Mvc.dll
+C:\Users\Beyza\Desktop\sfml-yeni\projeler\c#\kuaforsalonu\kuaforsalonu\bin\Debug\net8.0\System.Web.Razor.dll
+C:\Users\Beyza\Desktop\sfml-yeni\projeler\c#\kuaforsalonu\kuaforsalonu\bin\Debug\net8.0\System.Web.Helpers.dll
+C:\Users\Beyza\Desktop\sfml-yeni\projeler\c#\kuaforsalonu\kuaforsalonu\bin\Debug\net8.0\System.Web.WebPages.Deployment.dll
+C:\Users\Beyza\Desktop\sfml-yeni\projeler\c#\kuaforsalonu\kuaforsalonu\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
+C:\Users\Beyza\Desktop\sfml-yeni\projeler\c#\kuaforsalonu\kuaforsalonu\bin\Debug\net8.0\System.Web.WebPages.dll
+C:\Users\Beyza\Desktop\sfml-yeni\projeler\c#\kuaforsalonu\kuaforsalonu\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll
