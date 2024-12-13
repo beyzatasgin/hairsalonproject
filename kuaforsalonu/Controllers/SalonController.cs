@@ -84,14 +84,10 @@ namespace kuaforsalonu.Controllers
             if (id == null) return NotFound();
 
             var salon = await _context.Salonlar
-                
+                 .Include(s => s.Islemler)
                 .FirstOrDefaultAsync(m => m.SalonId == id);
 
             if (salon == null) return NotFound();
-
-            // Çalışma saatleri filtreleme
-            ViewBag.CalismaSaatleri = salon.CalismaSaatleri;
-
             return View(salon);
         }
 

@@ -53,7 +53,7 @@ namespace kuaforsalonu.Controllers
             {
                 _context.Add(islem);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details", "Salon", new { id = islem.SalonId }); // İşlem başarıyla eklendikten sonra salonun detaylarına yönlendir
             }
             ViewData["SalonId"] = new SelectList(_context.Salonlar, "SalonId", "Ad", islem.SalonId);
             return View(islem);
