@@ -10,15 +10,14 @@ namespace kuaforsalonu.Models
         public int AdminId { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [Column(TypeName = "Varchar(20)")]
         public string Eposta { get; set; }  
 
         [Required]
-        [StringLength(50)]
+        [Column(TypeName = "Varchar(10)")]
         public string Sifre { get; set; }
 
         [Required]
-        [StringLength(50)]
         public string Yetki { get; set; }  
     }
 }

@@ -2321,6 +2321,10 @@
       "PackagePath": "staticwebassets\\AdminLayout\\users-profile.html"
     },
     {
+      "Id": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\wwwroot\\blend_login_form-web_Free20-01-2018_206842255.zip",
+      "PackagePath": "staticwebassets\\blend_login_form-web_Free20-01-2018_206842255.zip"
+    },
+    {
       "Id": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -2559,6 +2563,50 @@
     {
       "Id": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\wwwroot\\web\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\web\\css\\font-awesome.css"
+    },
+    {
+      "Id": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\wwwroot\\web\\css\\style.css",
+      "PackagePath": "staticwebassets\\web\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\wwwroot\\web\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\web\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\wwwroot\\web\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\web\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\wwwroot\\web\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\web\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\wwwroot\\web\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\web\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\wwwroot\\web\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\web\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\wwwroot\\web\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\web\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\wwwroot\\web\\images\\3.jpg",
+      "PackagePath": "staticwebassets\\web\\images\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\wwwroot\\web\\index.html",
+      "PackagePath": "staticwebassets\\web\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\wwwroot\\web\\w3layouts-License.txt",
+      "PackagePath": "staticwebassets\\web\\w3layouts-License.txt"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.kuaforsalonu.props",

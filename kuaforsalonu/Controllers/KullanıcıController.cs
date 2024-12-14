@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using Microsoft.AspNetCore.Authorization;
+
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -8,10 +10,12 @@ using kuaforsalonu.Models;
 
 namespace kuaforsalonu.Controllers
 {
+    [Authorize]
     public class KullanıcıController : Controller
     {
+       
         private readonly Kuaforsalonu _db;
-
+     
         // Constructor: Dependency Injection ile DbContext
         public KullanıcıController(Kuaforsalonu db)
         {
