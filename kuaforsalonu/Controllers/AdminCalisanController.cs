@@ -17,9 +17,10 @@ namespace kuaforsalonu.Controllers
         }
 
         // GET: AdminCalisan
-        public async Task<IActionResult> Index()
+
+        public IActionResult Index()
         {
-            var calisans = await _db.Calisans.ToListAsync();
+            var calisans = _db.Calisans.Include(c => c.Salon).ToList();
             return View(calisans);
         }
 

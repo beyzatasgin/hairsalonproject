@@ -45,7 +45,9 @@ namespace kuaforsalonu.Models
         [Required]
         [StringLength(50)]
         public string Uzmanlik { get; set; }
-
+        
+        public int SalonId { get; set; }
+        public Salon Salon { get; set; }
         // Navigation property for related Randevu entries
         public virtual ICollection<Randevu> Randevus { get; set; }
     }

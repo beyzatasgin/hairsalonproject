@@ -1,79 +1,43 @@
-﻿@model IEnumerable<kuaforsalonu.Models.Calisan>
-
+﻿@using kuaforsalonu.Models
+@model List<Calisan>
 @{
     ViewBag.Title = "Çalışanlar Listesi";
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Çalışanlar</h2>
-
-<p>
-    @Html.ActionLink("Yeni Çalışan", "Create", new { @class = "btn btn-primary" })
-</p>
+<br />
 
 <table class="table table-bordered">
-    <thead>
+    <tr>
+        <th> Çalışan No </th>
+        <th> Adı</th>
+        <th> Soyadı </th>
+        <th> Kullanıcı Adı</th>
+        <th> Email</th>
+        <th> Şifre</th>
+        <th> Adres</th>
+        <th> Telefon</th>
+        <th> Uzmanlık</th>
+        <th>Çalıştığı Salon</th>
+        <th> Güncelle</th>
+        <th> Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Adi)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Soyadi)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.KullaniciAdi)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Sifre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Adres)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telefon)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Uzmanlik)
-            </th>
-            <th>Aksiyonlar</th>
+            <td>@item.CalisanNo</td>
+            <td>@item.Adi</td>
+            <td>@item.Soyadi</td>
+            <td>@item.KullaniciAdi</td>
+            <td>@item.Email</td>
+            <td>@item.Sifre</td>
+            <td>@item.Adres</td>
+            <td>@item.Telefon</td>
+            <td>@item.Uzmanlik</td>
+            <td>@item.SalonId</td>
+            <td><a href="/AdminCalisan/Edit/@item.CalisanNo" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/AdminCalisan/Delete/@item.CalisanNo" class="btn btn-danger">Sil</a></td>
         </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Adi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Soyadi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.KullaniciAdi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Sifre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Adres)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Telefon)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Uzmanlik)
-                </td>
-                <td>
-                    @Html.ActionLink("Düzenle", "Edit", new { id = item.CalisanNo }) |
-                    @Html.ActionLink("Sil", "Delete", new { id = item.CalisanNo })
-                </td>
-            </tr>
-        }
-    </tbody>
+    }
 </table>
+<a href="/AdminCalisan/Create" class="btn btn-primary">Yeni Çalışan Ekle</a>

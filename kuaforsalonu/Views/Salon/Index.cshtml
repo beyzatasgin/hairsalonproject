@@ -1,53 +1,35 @@
-﻿@model IEnumerable<kuaforsalonu.Models.Salon>
+﻿@using kuaforsalonu.Models
+@model List<Salon>
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<br />
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
+<table class="table table-bordered">
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Ad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Adres)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telefon)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CalismaSaatleri)
-            </th>
-            <th></th>
+            <th> ID </th>
+            <th> Ad</th>
+            <th> Adres </th>
+            <th>Telefon</th>
+            <th> Çalışma Saatleri </th>
+            <th> Güncelle</th>
+            <th> Sil</th> 
+            <th> Detaylar</th>
         </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Adres)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefon)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CalismaSaatleri)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.SalonId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.SalonId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.SalonId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.SalonId</td>
+                <td>@item.Ad</td>
+                <td>@item.Adres</td>
+                <td>@item.Telefon</td>
+                <td>@item.CalismaSaatleri</td>
+                <td><a href="/Salon/Edit/@item.SalonId" class="btn btn-success">Güncelle</a></td>
+                <td><a href="/Salon/Delete/@item.SalonId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Salon/Details/@item.SalonId" class="btn btn-default" style="background-color:yellow">Detaylar</a></td>
+            </tr>
+        }
 </table>
+<a href="/Salon/Create"class="btn btn-primary">Yeni Salon Ekle</a>

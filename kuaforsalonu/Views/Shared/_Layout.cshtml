@@ -1,51 +1,36 @@
 ﻿@{
     Layout = null;
 }
-
 <!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kuaför</title>
-    <meta name="description" content="Minimal Multipurpose Portfolio Template">
-
-    <!-- Favicon -->
-    <link id="favicon" rel="icon" type="image/png" href="~/Content/img/favicon.png" />
-
-    <!-- Google web fonts -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-    <!-- CSS Files -->
-    <link href="~/Content/css0f7c.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="~/Content/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="~/Content/css/pe-icon-7-stroke.css" />
-    <link rel="stylesheet" type="text/css" href="~/Content/css/headlines.css" />
-    <link rel="stylesheet" type="text/css" href="~/Content/css/plugins.css" />
-    <link rel="stylesheet" type="text/css" href="~/Content/style.css" />
-    <link href="~/Content/css/bootstrap-datetimepicker.css" rel="stylesheet" />
-    <link rel="stylesheet" href="~/Content/css/datepicker.min.css" />
-
-    <!-- Modernizr JS -->
-    <script src="~/Content/js/vendor/modernizr-2.8.3.min.js"></script>
-</head>
+<html>
+<title>Kuaför</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
 <body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="spinner">
-            <div class="double-bounce1"></div>
-            <div class="double-bounce2"></div>
-        </div>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%">
+        <h3 class="w3-bar-item">Menu</h3>
+        <a href="/Salon/Index" class="w3-bar-item w3-button">Salonlar</a>
+        <a href="/AdminCalisan/Index" class="w3-bar-item w3-button">Çalışanlar</a>
+        <a href="#" class="w3-bar-item w3-button">Randevular</a>
+        <a href="#" class="w3-bar-item w3-button">Hakkımızda</a>
+        <a href="#" class="w3-bar-item w3-button">Çıkış</a>
     </div>
 
-    <!-- Body Content -->
-    @RenderBody()
+    <!-- Page Content -->
+    <div style="margin-left:15%">
 
-    <!-- JS Files -->
-    <script src="~/js/vendor/jquery-1.12.0.min.js"></script>
-    <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+        <div class="w3-container w3-teal">
+            <h1>Kuaför</h1>
+        </div>
+
+        <div class="w3-container">
+            @RenderBody()
+        </div>
+
+    </div>
 
 </body>
 </html>

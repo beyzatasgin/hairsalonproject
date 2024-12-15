@@ -22,6 +22,7 @@ namespace kuaforsalonu.Controllers
         }
 
         // GET: Salon/Create
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
@@ -42,6 +43,7 @@ namespace kuaforsalonu.Controllers
         }
 
         // GET: Salon/Edit/5
+        [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
@@ -79,6 +81,7 @@ namespace kuaforsalonu.Controllers
         }
 
         // GET: Salon/Details/5
+        [HttpGet]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null) return NotFound();
@@ -92,6 +95,7 @@ namespace kuaforsalonu.Controllers
         }
 
         // GET: Salon/Delete/5
+        [HttpGet]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
