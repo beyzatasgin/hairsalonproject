@@ -1,79 +1,37 @@
-﻿@model IEnumerable<kuaforsalonu.Models.Musteri>
-
+﻿ @using kuaforsalonu.Models
+@model List<Musteri>
 @{
-    ViewBag.Title = "Müşteri Listesi";
+    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Müşteriler</h2>
+<br />
 
-<p>
-    @Html.ActionLink("Yeni Müşteri Ekle", "Create", null, new { @class = "btn btn-primary" })
-</p>
-
-<table class="table">
-    <thead>
+<table class="table table-bordered">
+    <tr>
+        <th> Müsteri Adı </th>
+        <th> Soyadı </th>
+        <th> Kullanıcı Adı</th>
+        <th> Email</th>
+        <th> Şifre</th>
+        <th> Adres</th>
+        <th> Telefon</th>
+        <th> Güncelle</th>
+        <th> Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstOrDefault().Yetki.YetkiAdı)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstOrDefault().Adi)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstOrDefault().Soyadi)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstOrDefault().KullaniciAdi)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstOrDefault().Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstOrDefault().Sifre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstOrDefault().Adres)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstOrDefault().Telefon)
-            </th>
-            <th></th>
+            <td>@item.Adi</td>
+            <td>@item.Soyadi</td>
+            <td>@item.KullaniciAdi</td>
+            <td>@item.Email</td>
+            <td>@item.Sifre</td>
+            <td>@item.Adres</td>
+            <td>@item.Telefon</td>
+            <td><a href="/AdminMusteri/Edit/@item.MusteriNo" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/AdminMusteri/Delete/@item.MusteriNo" class="btn btn-danger">Sil</a></td>
         </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Yetki.YetkiAdı)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Adi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Soyadi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.KullaniciAdi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Sifre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Adres)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Telefon)
-                </td>
-                <td>
-                    @Html.ActionLink("Düzenle", "Edit", new { id = item.MusteriNo }) |
-                    @Html.ActionLink("Sil", "Delete", new { id = item.MusteriNo })
-                </td>
-            </tr>
-        }
-    </tbody>
+    }
 </table>
+<a href="/AdminMusteri/Create/" class="btn btn-primary">Yeni Müşteri Ekle</a>

@@ -62,16 +62,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Admin/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9naW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Islem/Create.cshtml]
@@ -112,6 +104,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Photo/UploadPhoto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvdG9cVXBsb2FkUGhvdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Beyza/Desktop/sfml-yeni/projeler/c\#/kuaforsalonu/kuaforsalonu/Views/Salon/Create.cshtml]

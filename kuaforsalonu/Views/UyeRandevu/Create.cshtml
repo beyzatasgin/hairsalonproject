@@ -4,42 +4,9 @@
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<script type="text/javascript" src="~/lib/jquery/jquery.min.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $('#datetimepicker').datetimepicker({
-            format: "DD/MM/YYYY",
-        });
-    });
-</script>
-
-<div class="header-area dark animated">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <!--Header Logo-->
-                <div class="header-logo float-left">
-                    <a class="logo" href="#"><img src="~/Content/img/section-bg/logo6.png" alt="Logo"></a>
-                </div>
-                <!--Main Menu-->
-                <div class="main-menu float-right">
-                    <nav>
-                        <ul>
-                            <li><a href="/Home/Index"><p style="color:red">Anasayfa</p></a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <!--Mobile Menu-->
-                <div class="mobile-menu"></div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="portfolio-area section bg-dark pt-120 col-md-8" style="height: 670px;">
-    <h2>Randevu Oluştur</h2>
-
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("Create", "Randevu", FormMethod.Post))
     {
         @Html.AntiForgeryToken()
 

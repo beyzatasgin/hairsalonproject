@@ -1,7 +1,7 @@
 ﻿@model kuaforsalonu.Models.Calisan
 @{
     ViewData["Title"] = "Create";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 <br />
 <form class=" " form-group" method="post">
@@ -26,12 +26,6 @@
     <b>Telefon</b>
     @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control" })
     <br />
-    <b>Uzmanlık</b>
-    @Html.TextBoxFor(x => x.Uzmanlik, new { @class = "form-control" })
-    <br />
-    <b>Çalıştığı Salon</b>
-    @Html.DropDownListFor(x => x.SalonId, (IEnumerable<SelectListItem>)ViewBag.Salonlar, "Salon Seçin", new { @class = "form-control" })
 
-    <br />
     <button class="btn btn-info">Yeni Çalışan Ekle</button>
 </form>

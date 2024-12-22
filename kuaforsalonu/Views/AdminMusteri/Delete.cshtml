@@ -1,7 +1,7 @@
 ﻿@model kuaforsalonu.Models.Musteri
 
 @{
-    ViewBag.Title = "Müşteri Sil";
+    ViewBag.Title = "Delete";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
@@ -9,19 +9,14 @@
 
 <h3>Silme işlemini onaylıyor musunuz?</h3>
 <div>
-    <h4>Müşteri Bilgileri</h4>
+    <h4>Musteri</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Yetki.YetkiAdı)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Yetki.YetkiAdı)
-        </dd>
-
+   
         <dt>
             @Html.DisplayNameFor(model => model.Adi)
         </dt>
+
         <dd>
             @Html.DisplayFor(model => model.Adi)
         </dd>
@@ -29,6 +24,7 @@
         <dt>
             @Html.DisplayNameFor(model => model.Soyadi)
         </dt>
+
         <dd>
             @Html.DisplayFor(model => model.Soyadi)
         </dd>
@@ -36,6 +32,7 @@
         <dt>
             @Html.DisplayNameFor(model => model.KullaniciAdi)
         </dt>
+
         <dd>
             @Html.DisplayFor(model => model.KullaniciAdi)
         </dd>
@@ -43,6 +40,7 @@
         <dt>
             @Html.DisplayNameFor(model => model.Email)
         </dt>
+
         <dd>
             @Html.DisplayFor(model => model.Email)
         </dd>
@@ -50,6 +48,7 @@
         <dt>
             @Html.DisplayNameFor(model => model.Sifre)
         </dt>
+
         <dd>
             @Html.DisplayFor(model => model.Sifre)
         </dd>
@@ -57,6 +56,7 @@
         <dt>
             @Html.DisplayNameFor(model => model.Adres)
         </dt>
+
         <dd>
             @Html.DisplayFor(model => model.Adres)
         </dd>
@@ -64,21 +64,20 @@
         <dt>
             @Html.DisplayNameFor(model => model.Telefon)
         </dt>
+
         <dd>
             @Html.DisplayFor(model => model.Telefon)
         </dd>
+
     </dl>
 
-    @using (Html.BeginForm("Delete", "AdminMusteri", FormMethod.Post, new { @class = "form-horizontal" }))
+    @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
 
-        <!-- Hidden Field to pass ID -->
-        @Html.HiddenFor(model => model.MusteriNo)
-
         <div class="form-actions no-color">
-            <input type="submit" value="Sil" class="btn btn-danger" /> |
-            @Html.ActionLink("Geri Dön", "Index", null, new { @class = "btn btn-info" })
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Geri Dön", "Index")
         </div>
     }
 </div>

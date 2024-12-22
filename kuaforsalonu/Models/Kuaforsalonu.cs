@@ -13,13 +13,15 @@ namespace kuaforsalonu.Models
         // Veritabanı tablolarını temsil eden DbSet'ler
 
         public virtual DbSet<Calisan> Calisans { get; set; }
-        public virtual DbSet<Musteri> Musteris { get; set; }
-        public virtual DbSet<Randevu> Randevus { get; set; }
-        public virtual DbSet<Saat> Saats { get; set; }
+
         public virtual DbSet<Salon> Salonlar { get; set; }
-        public virtual DbSet<Yetki> Yetkis { get; set; }
         public virtual DbSet<Islem> Islemler { get; set; }
-        public virtual DbSet<Admin> Admin { get; set; }
+        public virtual DbSet<Admin> Adminler { get; set; }
+        public virtual DbSet<Randevu> Randevular { get; set; }
+        public virtual DbSet<Musteri> Musteriler { get; set; }
+        public virtual DbSet<Saat> Saatler { get; set; }
+        public virtual DbSet<Yetki> Yetkiler { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -27,13 +29,14 @@ namespace kuaforsalonu.Models
             // İlgili tablo yapılandırmaları
 
             modelBuilder.Entity<Calisan>().ToTable("Çalışanlar");
-            modelBuilder.Entity<Randevu>().ToTable("Randevular");
-            modelBuilder.Entity<Musteri>().ToTable("Müşteriler");
-            modelBuilder.Entity<Saat>().ToTable("Saat");
             modelBuilder.Entity<Salon>().ToTable("Salonlar");
             modelBuilder.Entity<Islem>().ToTable("Islemler");
-            modelBuilder.Entity<Yetki>().ToTable("Yetki");
-            modelBuilder.Entity<Admin>().ToTable("Admin");
+            modelBuilder.Entity<Admin>().ToTable("Adminler");
+            modelBuilder.Entity<Randevu>().ToTable("Randevular");
+            modelBuilder.Entity<Musteri>().ToTable("Musteriler");
+            modelBuilder.Entity<Saat>().ToTable("Saatler");
+            modelBuilder.Entity<Yetki>().ToTable("Yetkiler");
+
         }
     }
 }

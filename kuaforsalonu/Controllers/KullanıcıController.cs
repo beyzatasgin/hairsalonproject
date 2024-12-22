@@ -13,10 +13,8 @@ namespace kuaforsalonu.Controllers
     [Authorize]
     public class KullanıcıController : Controller
     {
-       
+
         private readonly Kuaforsalonu _db;
-     
-        // Constructor: Dependency Injection ile DbContext
         public KullanıcıController(Kuaforsalonu db)
         {
             _db = db;
@@ -25,7 +23,7 @@ namespace kuaforsalonu.Controllers
         // Kullanıcı bilgilerini görüntüle
         public IActionResult Index(int id)
         {
-            var uye = _db.Musteris.SingleOrDefault(m => m.MusteriNo == id);
+            var uye = _db.Musteriler.SingleOrDefault(m => m.MusteriNo == id);
             if (uye == null || (int?)HttpContext.Session.GetInt32("üyeid") != uye.MusteriNo)
             {
                 return NotFound(); // Giriş yapmamış kullanıcı için hata döndürme
@@ -43,13 +41,12 @@ namespace kuaforsalonu.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(Musteri müşteri)
         {
-            var login = _db.Musteris.SingleOrDefault(m => m.KullaniciAdi == müşteri.KullaniciAdi);
+            var login = _db.Musteriler.SingleOrDefault(m => m.KullaniciAdi == müşteri.KullaniciAdi);
             if (login != null && login.Sifre == müşteri.Sifre)
             {
                 // Giriş başarılı, oturum bilgilerini kaydetme
                 HttpContext.Session.SetInt32("üyeid", login.MusteriNo);
                 HttpContext.Session.SetString("KullanıcıAdı", login.KullaniciAdi);
-                HttpContext.Session.SetInt32("yetkiid", login.YetkiNo);
 
                 return RedirectToAction("Index", "Home"); // Ana sayfaya yönlendirme
             }
@@ -80,9 +77,8 @@ namespace kuaforsalonu.Controllers
         {
             if (ModelState.IsValid)
             {
-                müşteri.YetkiNo = 2; // Varsayılan yetkiyi belirleme
 
-                _db.Musteris.Add(müşteri); // Kullanıcıyı veri tabanına ekle
+                _db.Musteriler.Add(müşteri); // Kullanıcıyı veri tabanına ekle
                 await _db.SaveChangesAsync(); // Değişiklikleri kaydet
 
                 // Oturum bilgilerini kaydet
@@ -97,7 +93,7 @@ namespace kuaforsalonu.Controllers
         // Kullanıcı bilgilerini düzenlemek için form sayfası
         public IActionResult Edit(int id)
         {
-            var uye = _db.Musteris.SingleOrDefault(m => m.MusteriNo == id);
+            var uye = _db.Musteriler.SingleOrDefault(m => m.MusteriNo == id);
             if (uye == null || (int?)HttpContext.Session.GetInt32("üyeid") != uye.MusteriNo)
             {
                 return NotFound(); // Giriş yapmamışsa hata döndürme
@@ -111,7 +107,7 @@ namespace kuaforsalonu.Controllers
         {
             if (ModelState.IsValid)
             {
-                var müşteris = _db.Musteris.SingleOrDefault(m => m.MusteriNo == id);
+                var müşteris = _db.Musteriler.SingleOrDefault(m => m.MusteriNo == id);
                 if (müşteris == null)
                 {
                     return NotFound(); // Kullanıcı bulunamadıysa hata döndürme

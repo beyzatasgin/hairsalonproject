@@ -14,6 +14,16 @@
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)openaiclient\1.0.0\contentFiles\any\netstandard2.1\openai.json" Condition="Exists('$(NuGetPackageRoot)openaiclient\1.0.0\contentFiles\any\netstandard2.1\openai.json')">
+      <NuGetPackageId>OpenAiClient</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>openai.json</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Content Include="$(NuGetPackageRoot)bootstrap\5.3.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" Condition="Exists('$(NuGetPackageRoot)bootstrap\5.3.3\contentFiles\any\any\wwwroot\css\bootstrap-grid.css')">
       <NuGetPackageId>bootstrap</NuGetPackageId>
       <NuGetPackageVersion>5.3.3</NuGetPackageVersion>

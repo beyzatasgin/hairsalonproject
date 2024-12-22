@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 namespace kuaforsalonu.Controllers
 {
     public class Startup
@@ -21,14 +23,21 @@ namespace kuaforsalonu.Controllers
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession(); // Session servisini ekleyin
 
             services.AddMvc();
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(x =>
                 {
-                    x.LoginPath = "/Login/GirisYap/";
+                    x.LoginPath = "/Login/Login/";
             });
+            services.AddMvc(config =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                .RequireAuthenticatedUser().Build();
 
+                config.Filters.Add(new AuthorizeFilter(policy));
+            });
 
         }
 
@@ -47,6 +56,8 @@ namespace kuaforsalonu.Controllers
             }
 
             app.UseStaticFiles();
+            app.UseSession(); // Session middleware'ini kullan
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

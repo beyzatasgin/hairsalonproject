@@ -20,14 +20,14 @@ namespace kuaforsalonu.Controllers
         // GET: AdminMusteri
         public async Task<IActionResult> Index()
         {
-            var musteris = await _context.Musteris.ToListAsync();
+            var musteris = await _context.Musteriler.ToListAsync();
             return View(musteris);
         }
 
         // GET: AdminMusteri/Details/5
         public async Task<IActionResult> Details(int id)
         {
-            var musteri = await _context.Musteris
+            var musteri = await _context.Musteriler
                 .FirstOrDefaultAsync(m => m.MusteriNo == id);
             if (musteri == null)
             {
@@ -39,7 +39,6 @@ namespace kuaforsalonu.Controllers
         // GET: AdminMusteri/Create
         public IActionResult Create()
         {
-            ViewData["YetkiNo"] = new SelectList(_context.Yetkis, "YetkiNo", "YetkiAdı");
             return View();
         }
 
@@ -54,19 +53,18 @@ namespace kuaforsalonu.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["YetkiNo"] = new SelectList(_context.Yetkis, "YetkiNo", "YetkiAdı", musteri.YetkiNo);
             return View(musteri);
         }
 
         // GET: AdminMusteri/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
-            var musteri = await _context.Musteris.FindAsync(id);
+            var musteri = await _context.Musteriler.FindAsync(id);
             if (musteri == null)
             {
                 return NotFound();
             }
-            ViewData["YetkiNo"] = new SelectList(_context.Yetkis, "YetkiNo", "YetkiAdı", musteri.YetkiNo);
+          
             return View(musteri);
         }
 
@@ -93,14 +91,14 @@ namespace kuaforsalonu.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["YetkiNo"] = new SelectList(_context.Yetkis, "YetkiNo", "YetkiAdı", musteri.YetkiNo);
+      
             return View(musteri);
         }
 
         // GET: AdminMusteri/Delete/5
         public async Task<IActionResult> Delete(int id)
         {
-            var musteri = await _context.Musteris
+            var musteri = await _context.Musteriler
                 .FirstOrDefaultAsync(m => m.MusteriNo == id);
             if (musteri == null)
             {
@@ -114,10 +112,10 @@ namespace kuaforsalonu.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var musteri = await _context.Musteris.FindAsync(id);
+            var musteri = await _context.Musteriler.FindAsync(id);
             if (musteri != null)
             {
-                _context.Musteris.Remove(musteri);
+                _context.Musteriler.Remove(musteri);
                 await _context.SaveChangesAsync();
             }
             return RedirectToAction(nameof(Index));

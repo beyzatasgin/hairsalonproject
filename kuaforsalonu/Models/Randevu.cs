@@ -3,6 +3,11 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+using kuaforsalonu.Models;
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace kuaforsalonu.Models
 {
     public class Randevu
@@ -24,7 +29,7 @@ namespace kuaforsalonu.Models
         public virtual Calisan Calisan { get; set; }
 
         [ForeignKey("MusteriNo")]
-        public virtual Musteri Musteri { get; set; }
+         public virtual Musteri Musteri { get; set; }
 
         [ForeignKey("SaatID")]
         public virtual Saat Saat { get; set; }

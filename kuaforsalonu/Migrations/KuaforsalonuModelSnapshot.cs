@@ -24,27 +24,23 @@ namespace kuaforsalonu.Migrations
 
             modelBuilder.Entity("kuaforsalonu.Models.Admin", b =>
                 {
-                    b.Property<int>("AdminId")
+                    b.Property<int>("AdminID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdminId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdminID"));
 
                     b.Property<string>("Eposta")
                         .IsRequired()
-                        .HasColumnType("Varchar(20)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Sifre")
                         .IsRequired()
-                        .HasColumnType("Varchar(10)");
-
-                    b.Property<string>("Yetki")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("AdminId");
+                    b.HasKey("AdminID");
 
-                    b.ToTable("Admin", (string)null);
+                    b.ToTable("Adminler", (string)null);
                 });
 
             modelBuilder.Entity("kuaforsalonu.Models.Calisan", b =>
@@ -74,7 +70,7 @@ namespace kuaforsalonu.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<int?>("SalonId")
+                    b.Property<int>("SalonId")
                         .HasColumnType("int");
 
                     b.Property<string>("Sifre")
@@ -185,7 +181,7 @@ namespace kuaforsalonu.Migrations
 
                     b.HasIndex("YetkiNo1");
 
-                    b.ToTable("Müşteriler", (string)null);
+                    b.ToTable("Musteriler", (string)null);
                 });
 
             modelBuilder.Entity("kuaforsalonu.Models.Randevu", b =>
@@ -234,7 +230,7 @@ namespace kuaforsalonu.Migrations
 
                     b.HasKey("SaatID");
 
-                    b.ToTable("Saat", (string)null);
+                    b.ToTable("Saatler", (string)null);
                 });
 
             modelBuilder.Entity("kuaforsalonu.Models.Salon", b =>
@@ -282,14 +278,18 @@ namespace kuaforsalonu.Migrations
 
                     b.HasKey("YetkiNo");
 
-                    b.ToTable("Yetki", (string)null);
+                    b.ToTable("Yetki");
                 });
 
             modelBuilder.Entity("kuaforsalonu.Models.Calisan", b =>
                 {
-                    b.HasOne("kuaforsalonu.Models.Salon", null)
+                    b.HasOne("kuaforsalonu.Models.Salon", "Salon")
                         .WithMany("Calisanlar")
-                        .HasForeignKey("SalonId");
+                        .HasForeignKey("SalonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Salon");
                 });
 
             modelBuilder.Entity("kuaforsalonu.Models.Islem", b =>
@@ -317,7 +317,7 @@ namespace kuaforsalonu.Migrations
             modelBuilder.Entity("kuaforsalonu.Models.Randevu", b =>
                 {
                     b.HasOne("kuaforsalonu.Models.Calisan", "Calisan")
-                        .WithMany("Randevus")
+                        .WithMany()
                         .HasForeignKey("CalisanNo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -329,7 +329,7 @@ namespace kuaforsalonu.Migrations
                         .IsRequired();
 
                     b.HasOne("kuaforsalonu.Models.Saat", "Saat")
-                        .WithMany("Randevus")
+                        .WithMany("Randevular")
                         .HasForeignKey("SaatID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -341,11 +341,6 @@ namespace kuaforsalonu.Migrations
                     b.Navigation("Saat");
                 });
 
-            modelBuilder.Entity("kuaforsalonu.Models.Calisan", b =>
-                {
-                    b.Navigation("Randevus");
-                });
-
             modelBuilder.Entity("kuaforsalonu.Models.Musteri", b =>
                 {
                     b.Navigation("Randevular");
@@ -353,7 +348,7 @@ namespace kuaforsalonu.Migrations
 
             modelBuilder.Entity("kuaforsalonu.Models.Saat", b =>
                 {
-                    b.Navigation("Randevus");
+                    b.Navigation("Randevular");
                 });
 
             modelBuilder.Entity("kuaforsalonu.Models.Salon", b =>

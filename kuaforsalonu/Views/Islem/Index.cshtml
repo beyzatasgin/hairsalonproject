@@ -1,53 +1,33 @@
-﻿@model IEnumerable<kuaforsalonu.Models.Islem>
+﻿@using kuaforsalonu.Models
+@model List<Islem>
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
+<br />
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
+<table class="table table-bordered">
+    <tr>
+        <th> ID </th>
+        <th> Ad</th>
+        <th> Süre </th>
+        <th> Ucret</th>
+        <th> Güncelle</th>
+        <th> Sil</th>
+        <th> Detaylar</th>
+    </tr>
+    @foreach (var item in Model)
+    {
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Ad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SureDakika)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Ucret)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Salon)
-            </th>
-            <th></th>
+            <td>@item.IslemId</td>
+            <td>@item.Ad</td>
+            <td>@item.SureDakika</td>
+            <td>@item.Ucret</td>
+            <td><a href="/Islem/Edit/@item.IslemId" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Islem/Delete/@item.IslemId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Islem/Details/@item.IslemId" class="btn btn-default" style="background-color:yellow">Detaylar</a></td>
         </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SureDakika)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ucret)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Salon.Ad)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IslemId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IslemId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IslemId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
+    }
 </table>
+<a href="/Salon/Details/" class="btn btn-primary">Yeni İşlem Ekle</a>

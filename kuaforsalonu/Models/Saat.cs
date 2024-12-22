@@ -11,7 +11,7 @@ namespace kuaforsalonu.Models
     {
         public Saat()
         {
-            Randevus = new HashSet<Randevu>();
+            Randevular = new HashSet<Randevu>();
         }
 
         [Key]
@@ -20,8 +20,6 @@ namespace kuaforsalonu.Models
         [Required]
         [StringLength(50)]
         public string Adi { get; set; }
-
-        // Navigation property
-        public virtual ICollection<Randevu> Randevus { get; set; }
+        public virtual ICollection<Randevu> Randevular { get; set; }
     }
 }

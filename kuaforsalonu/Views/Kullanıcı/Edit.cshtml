@@ -1,7 +1,7 @@
 ﻿@model kuaforsalonu.Models.Musteri
 
 @{
-    ViewBag.Title = "Edit";
+    ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,106 +11,95 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <!-- Header Logo -->
+                <!--Header Logo-->
                 <div class="header-logo float-left">
                     <a class="logo" href="#"><img src="~/Content/img/section-bg/logo6.png" alt="Logo"></a>
                 </div>
-                <!-- Main Menu -->
+                <!--Main Menu-->
                 <div class="main-menu float-right">
                     <nav>
                         <ul>
-                            <li><a href="/Home/Index">Anasayfa</a></li>
+                            <li><a asp-controller="Home" asp-action="Index">Anasayfa</a></li>
                         </ul>
                     </nav>
                 </div>
-                <!-- Mobile Menu -->
+                <!--Mobile Menu-->
                 <div class="mobile-menu"></div>
             </div>
         </div>
     </div>
 </div>
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    <div class="portfolio-area section bg-dark pt-120 col-md-8" style="height: 670px;">
-        <h2>Profil Güncelleme</h2>
+<!-- Form Section -->
+<div class="portfolio-area section bg-dark pt-120 col-md-8" style="height: 670px;">
+    <h2>Profil Güncelleme</h2>
+    <form asp-action="Edit" method="post">
         <div class="form-horizontal">
             <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MusteriNo" />
 
-            <!-- Hidden field for MusteriNo -->
-            @Html.HiddenFor(model => model.MusteriNo)
-
-            <!-- Adi Input -->
             <div class="form-group">
-                @Html.LabelFor(model => model.Adi, htmlAttributes: new { @class = "control-label col-md-2" })
+                <label asp-for="Adi" class="control-label col-md-2"></label>
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Adi, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Adi, "", new { @class = "text-danger" })
+                    <input asp-for="Adi" class="form-control" />
+                    <span asp-validation-for="Adi" class="text-danger"></span>
                 </div>
             </div>
 
-            <!-- Soyadi Input -->
             <div class="form-group">
-                @Html.LabelFor(model => model.Soyadi, htmlAttributes: new { @class = "control-label col-md-2" })
+                <label asp-for="Soyadi" class="control-label col-md-2"></label>
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Soyadi, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Soyadi, "", new { @class = "text-danger" })
+                    <input asp-for="Soyadi" class="form-control" />
+                    <span asp-validation-for="Soyadi" class="text-danger"></span>
                 </div>
             </div>
 
-            <!-- KullaniciAdi Input -->
             <div class="form-group">
-                @Html.LabelFor(model => model.KullaniciAdi, htmlAttributes: new { @class = "control-label col-md-2" })
+                <label asp-for="KullaniciAdi" class="control-label col-md-2"></label>
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.KullaniciAdi, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.KullaniciAdi, "", new { @class = "text-danger" })
+                    <input asp-for="KullaniciAdi" class="form-control" />
+                    <span asp-validation-for="KullaniciAdi" class="text-danger"></span>
                 </div>
             </div>
 
-            <!-- Email Input -->
             <div class="form-group">
-                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <label asp-for="Email" class="control-label col-md-2"></label>
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
             </div>
 
-            <!-- Sifre Input -->
             <div class="form-group">
-                @Html.LabelFor(model => model.Sifre, htmlAttributes: new { @class = "control-label col-md-2" })
+                <label asp-for="Sifre" class="control-label col-md-2"></label>
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Sifre, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Sifre, "", new { @class = "text-danger" })
+                    <input asp-for="Sifre" class="form-control" type="password" />
+                    <span asp-validation-for="Sifre" class="text-danger"></span>
                 </div>
             </div>
 
-            <!-- Adres Input -->
             <div class="form-group">
-                @Html.LabelFor(model => model.Adres, htmlAttributes: new { @class = "control-label col-md-2" })
+                <label asp-for="Adres" class="control-label col-md-2"></label>
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Adres, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Adres, "", new { @class = "text-danger" })
+                    <input asp-for="Adres" class="form-control" />
+                    <span asp-validation-for="Adres" class="text-danger"></span>
                 </div>
             </div>
 
-            <!-- Telefon Input -->
             <div class="form-group">
-                @Html.LabelFor(model => model.Telefon, htmlAttributes: new { @class = "control-label col-md-2" })
+                <label asp-for="Telefon" class="control-label col-md-2"></label>
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Telefon, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Telefon, "", new { @class = "text-danger" })
+                    <input asp-for="Telefon" class="form-control" />
+                    <span asp-validation-for="Telefon" class="text-danger"></span>
                 </div>
             </div>
 
-            <!-- Submit Button -->
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Güncelle" class="btn btn-default" />
+                    <button type="submit" class="btn btn-primary">Güncelle</button>
                 </div>
             </div>
         </div>
-    </div>
-}
+    </form>
+</div>

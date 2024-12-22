@@ -1,23 +1,17 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace kuaforsalonu.Models
 {
-    [Table("Admin")]
     public class Admin
     {
-        [Key]
-        public int AdminId { get; set; }
-
-        [Required]
-        [Column(TypeName = "Varchar(20)")]
-        public string Eposta { get; set; }  
-
-        [Required]
-        [Column(TypeName = "Varchar(10)")]
+        public int AdminID { get; set; }
+        public string Eposta { get; set; }
         public string Sifre { get; set; }
-
-        [Required]
-        public string Yetki { get; set; }  
     }
+
 }

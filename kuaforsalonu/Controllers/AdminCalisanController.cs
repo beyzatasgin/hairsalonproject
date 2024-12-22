@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using kuaforsalonu.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace kuaforsalonu.Controllers
 {
+   
     public class AdminCalisanController : Controller
     {
         private readonly Kuaforsalonu _db;
@@ -15,24 +17,11 @@ namespace kuaforsalonu.Controllers
         {
             _db = db;
         }
-
         // GET: AdminCalisan
-
         public IActionResult Index()
         {
             var calisans = _db.Calisans.Include(c => c.Salon).ToList();
             return View(calisans);
-        }
-
-        // GET: AdminCalisan/Details/5
-        public async Task<IActionResult> Details(int id)
-        {
-            var calisan = await _db.Calisans.FindAsync(id);
-            if (calisan == null)
-            {
-                return NotFound();
-            }
-            return View(calisan);
         }
 
         // GET: AdminCalisan/Create
@@ -92,6 +81,17 @@ namespace kuaforsalonu.Controllers
             return View(calisan);
         }
 
+        // GET: AdminCalisan/Details/5
+        public async Task<IActionResult> Details(int id)
+        {
+            var calisan = await _db.Calisans.FindAsync(id);
+            if (calisan == null)
+            {
+                return NotFound();
+            }
+            return View(calisan);
+        }
+
         // GET: AdminCalisan/Delete/5
         public async Task<IActionResult> Delete(int id)
         {
@@ -113,11 +113,6 @@ namespace kuaforsalonu.Controllers
             {
                 return NotFound();
             }
-
-            // Remove related Randevus
-            var randevus = _db.Randevus.Where(r => r.CalisanNo == id).ToList();
-            _db.Randevus.RemoveRange(randevus);
-
             // Remove the Calisan
             _db.Calisans.Remove(calisan);
             await _db.SaveChangesAsync();

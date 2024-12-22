@@ -20,7 +20,7 @@ namespace kuaforsalonu.Controllers
         // GET: UyeRandevu
         public async Task<IActionResult> Index()
         {
-            var randevus = await _db.Randevus.Include(r => r.Calisan).Include(r => r.Saat).ToListAsync();
+            var randevus = await _db.Randevular.Include(r => r.Calisan).Include(r => r.Saat).ToListAsync();
             return View(randevus);
         }
 
@@ -32,7 +32,7 @@ namespace kuaforsalonu.Controllers
                 return BadRequest();
             }
 
-            var randevu = await _db.Randevus
+            var randevu = await _db.Randevular
                 .Include(r => r.Calisan)
                 .Include(r => r.Saat)
                 .FirstOrDefaultAsync(r => r.RandevuID == id);
@@ -48,7 +48,7 @@ namespace kuaforsalonu.Controllers
         public async Task<IActionResult> Details2()
         {
             var id = Convert.ToInt32(HttpContext.Session.GetString("üyeid"));
-            var randevus = await _db.Randevus.Include(r => r.Calisan).Include(r => r.Saat)
+            var randevus = await _db.Randevular.Include(r => r.Calisan).Include(r => r.Saat)
                 .Where(r => r.MusteriNo == id)
                 .ToListAsync();
 
@@ -64,7 +64,7 @@ namespace kuaforsalonu.Controllers
         public IActionResult Create()
         {
             ViewData["CalisanNo"] = new SelectList(_db.Calisans, "CalisanNo", "Adi");
-            ViewData["SaatID"] = new SelectList(_db.Saats, "SaatID", "Adi");
+            ViewData["SaatID"] = new SelectList(_db.Saatler, "SaatID", "Adi");
             return View();
         }
 
@@ -76,13 +76,13 @@ namespace kuaforsalonu.Controllers
             if (ModelState.IsValid)
             {
                 randevu.MusteriNo = Convert.ToInt32(HttpContext.Session.GetString("üyeid"));
-                _db.Randevus.Add(randevu);
+                _db.Randevular.Add(randevu);
                 await _db.SaveChangesAsync();
                 return RedirectToAction(nameof(Details2));
             }
 
             ViewData["CalisanNo"] = new SelectList(_db.Calisans, "CalisanNo", "Adi", randevu.CalisanNo);
-            ViewData["SaatID"] = new SelectList(_db.Saats, "SaatID", "Adi", randevu.SaatID);
+            ViewData["SaatID"] = new SelectList(_db.Saatler, "SaatID", "Adi", randevu.SaatID);
             return View(randevu);
         }
 
@@ -94,14 +94,14 @@ namespace kuaforsalonu.Controllers
                 return BadRequest();
             }
 
-            var randevu = await _db.Randevus.FindAsync(id);
+            var randevu = await _db.Randevular.FindAsync(id);
             if (randevu == null)
             {
                 return NotFound();
             }
 
             ViewData["CalisanNo"] = new SelectList(_db.Calisans, "CalisanNo", "Adi", randevu.CalisanNo);
-            ViewData["SaatID"] = new SelectList(_db.Saats, "SaatID", "Adi", randevu.SaatID);
+            ViewData["SaatID"] = new SelectList(_db.Saatler, "SaatID", "Adi", randevu.SaatID);
             return View(randevu);
         }
 
@@ -138,7 +138,7 @@ namespace kuaforsalonu.Controllers
             }
 
             ViewData["CalisanNo"] = new SelectList(_db.Calisans, "CalisanNo", "Adi", randevu.CalisanNo);
-            ViewData["SaatID"] = new SelectList(_db.Saats, "SaatID", "Adi", randevu.SaatID);
+            ViewData["SaatID"] = new SelectList(_db.Saatler, "SaatID", "Adi", randevu.SaatID);
             return View(randevu);
         }
 
@@ -150,7 +150,7 @@ namespace kuaforsalonu.Controllers
                 return BadRequest();
             }
 
-            var randevu = await _db.Randevus
+            var randevu = await _db.Randevular
                 .Include(r => r.Calisan)
                 .Include(r => r.Saat)
                 .FirstOrDefaultAsync(r => r.RandevuID == id);
@@ -168,15 +168,15 @@ namespace kuaforsalonu.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var randevu = await _db.Randevus.FindAsync(id);
-            _db.Randevus.Remove(randevu);
+            var randevu = await _db.Randevular.FindAsync(id);
+            _db.Randevular.Remove(randevu);
             await _db.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool RandevuExists(int id)
         {
-            return _db.Randevus.Any(e => e.RandevuID == id);
+            return _db.Randevular.Any(e => e.RandevuID == id);
         }
     }
 }

@@ -1,31 +1,27 @@
-﻿@using kuaforsalonu.Models
+﻿ @using kuaforsalonu.Models
 @model List<Calisan>
 @{
-    ViewBag.Title = "Çalışanlar Listesi";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <br />
 
 <table class="table table-bordered">
     <tr>
-        <th> Çalışan No </th>
-        <th> Adı</th>
+        <th>  Adı </th>
         <th> Soyadı </th>
         <th> Kullanıcı Adı</th>
         <th> Email</th>
         <th> Şifre</th>
         <th> Adres</th>
         <th> Telefon</th>
-        <th> Uzmanlık</th>
-        <th>Çalıştığı Salon</th>
         <th> Güncelle</th>
         <th> Sil</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.CalisanNo</td>
             <td>@item.Adi</td>
             <td>@item.Soyadi</td>
             <td>@item.KullaniciAdi</td>
@@ -33,11 +29,9 @@
             <td>@item.Sifre</td>
             <td>@item.Adres</td>
             <td>@item.Telefon</td>
-            <td>@item.Uzmanlik</td>
-            <td>@item.SalonId</td>
             <td><a href="/AdminCalisan/Edit/@item.CalisanNo" class="btn btn-success">Güncelle</a></td>
             <td><a href="/AdminCalisan/Delete/@item.CalisanNo" class="btn btn-danger">Sil</a></td>
         </tr>
     }
 </table>
-<a href="/AdminCalisan/Create" class="btn btn-primary">Yeni Çalışan Ekle</a>
+<a href="/AdminCalisan/Create/" class="btn btn-primary">Yeni Çalışan Ekle</a>

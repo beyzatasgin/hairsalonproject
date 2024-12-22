@@ -1,7 +1,7 @@
 ﻿@model kuaforsalonu.Models.Musteri
 
 @{
-    ViewBag.Title = "Login";
+    ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,32 +11,38 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <!-- Header Logo -->
+                <!--Header Logo-->
                 <div class="header-logo float-left">
                     <a class="logo" href="#"><img src="~/Content/img/section-bg/logo6.png" alt="Logo"></a>
                 </div>
-                <!-- Main Menu -->
+                <!--Main Menu-->
                 <div class="main-menu float-right">
                     <nav>
                         <ul>
-                            <li><a href="/Home/Index">Anasayfa</a></li>
-                            <li><a href="/Kullanıcı/Create">Üye Ol</a></li>
+                            <li>
+                                <a asp-controller="Home" asp-action="Index">Anasayfa</a>
+                            </li>
+                            <li>
+                                <a asp-controller="Kullanıcı" asp-action="Create">Üye Ol</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
-                <!-- Mobile Menu -->
+                <!--Mobile Menu-->
                 <div class="mobile-menu"></div>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Login Form Section -->
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     <div class="portfolio-area section bg-dark pt-120 col-md-8" style="height: 670px;">
         <h2>Giriş</h2>
         <div class="form-horizontal">
+
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -58,10 +64,10 @@
                 </div>
             </div>
 
-            <!-- Submit Button -->
+            <!-- Giriş Butonu -->
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Giriş" class="btn btn-default" />
+                    <input type="submit" value="Giriş" class="btn btn-primary" />
                 </div>
             </div>
         </div>
