@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\kuaforsalonu.csproj": {}
+    "C:\\Users\\Beyza\\Source\\Repos\\kuaforsalonuwebproje\\kuaforsalonu\\kuaforsalonu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\kuaforsalonu.csproj": {
+    "C:\\Users\\Beyza\\Source\\Repos\\kuaforsalonuwebproje\\kuaforsalonu\\kuaforsalonu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\kuaforsalonu.csproj",
+        "projectUniqueName": "C:\\Users\\Beyza\\Source\\Repos\\kuaforsalonuwebproje\\kuaforsalonu\\kuaforsalonu.csproj",
         "projectName": "kuaforsalonu",
-        "projectPath": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\kuaforsalonu.csproj",
+        "projectPath": "C:\\Users\\Beyza\\Source\\Repos\\kuaforsalonuwebproje\\kuaforsalonu\\kuaforsalonu.csproj",
         "packagesPath": "C:\\Users\\Beyza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\obj\\",
+        "outputPath": "C:\\Users\\Beyza\\Source\\Repos\\kuaforsalonuwebproje\\kuaforsalonu\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ded7+Z9qniEnyMQhQSK1pRXqpIpSEURCw+xP3BC6s1432khzdME8EuVrPHTzu8OVZpn/bBGZBmi8HuJW/2dQ7Q==",
+  "dgSpecHash": "FQe/r5SRqXPyn+LPyjcVSX02H8KA0dEvQ/qvk7XK/KJATVo5dnmERYcKmRFDFhcJf9OKu4hwe/nAS69ii9zEYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Beyza\\Desktop\\sfml-yeni\\projeler\\c#\\kuaforsalonu\\kuaforsalonu\\kuaforsalonu.csproj",
+  "projectFilePath": "C:\\Users\\Beyza\\Source\\Repos\\kuaforsalonuwebproje\\kuaforsalonu\\kuaforsalonu.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Beyza\\.nuget\\packages\\azure.ai.openai\\2.1.0\\azure.ai.openai.2.1.0.nupkg.sha512",
     "C:\\Users\\Beyza\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",
