@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using OpenAI;
 using Microsoft.Extensions.Configuration;
-
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System.Net.Http;
 namespace kuaforsalonu
 {
     public class Program
@@ -11,7 +13,12 @@ namespace kuaforsalonu
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            // OpenAIService ve HttpClient'ı DI container'a ekliyoruz
+            builder.Services.AddHttpClient<OpenAIService>();
+            builder.Services.AddScoped<OpenAIService>();
 
+            // Diğer servisleri ekliyoruz
+            builder.Services.AddControllersWithViews();
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<Kuaforsalonu>(options =>
@@ -22,7 +29,7 @@ namespace kuaforsalonu
                 options.LoginPath = "/Login/Login";
             });
 
-            // OpenAI API'yi yap�land�rma
+            // OpenAI API'yi yapılandırma
             builder.Services.AddSingleton(sp =>
                 new OpenAIAPI(builder.Configuration["OpenAI:ApiKey"]));
 
