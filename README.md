@@ -30,7 +30,7 @@ Admin,kullanıcı adı g221210018@sakarya.edu.tr ve şifre sau olacak şekilde a
 
 
 ## Randevu İşlemleri:
-![image](https://github.com/user-attachments/assets/c2ebeafc-f4f5-4ba0-b083-7c4e020d8950
+![image](https://github.com/user-attachments/assets/c2ebeafc-f4f5-4ba0-b083-7c4e020d8950)
 ![image](https://github.com/user-attachments/assets/a834708e-c965-4e86-a668-3b76f434b077)
 ![image](https://github.com/user-attachments/assets/7497a281-87db-4129-97b4-dd75c31029a3)
 
@@ -38,5 +38,6 @@ Admin,kullanıcı adı g221210018@sakarya.edu.tr ve şifre sau olacak şekilde a
 ## Veritabanı:
 ![image](https://github.com/user-attachments/assets/afd5c59a-34ca-4e4b-bf63-d7e4cb227453)
 ![image](https://github.com/user-attachments/assets/6d35f19e-fb29-443c-815f-64ea057c1895)
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/76b5dbd1-85a7-4f35-8a58-07336669f574)
+
 
